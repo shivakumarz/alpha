@@ -56,11 +56,11 @@ public class Shop {
 
 	@Keyword
 	def static void addToCartWithGlobalVariable(){
-		addToCart(GlobalVariable.productName,GlobalVariable.urlProduct)
+		addToCart(GlobalVariable.productName,GlobalVariable.urlLoginProduct)
 	}
 
 	@Keyword
 	def static void applyCouponAndAddToCartWithGlobalVariable(){
-		applyCouponAndAddToCart(GlobalVariable.productName, GlobalVariable.urlProduct, GlobalVariable.coupon)
+		applyCouponAndAddToCart(GlobalVariable.productName, GlobalVariable.urlLoginProduct, GlobalVariable.coupon)
 	}
 }
