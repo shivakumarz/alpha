@@ -51,6 +51,8 @@ public class login {
 			WebUI.click(findTestObject('Modules/verification/Idcheck/buttonSend'))
 			WebUI.verifyElementPresent(findTestObject('Modules/verification/Idcheck/succefulAlert'), 0)
 			WebUI.click(findTestObject('Modules/hamburgerMenu'))
+			
+			
 		}
 	}
 
@@ -70,6 +72,8 @@ public class login {
 			verifyFieldIsEmpty(findTestObject('Modules/verification/Idcheck/enterName'))
 			verifyFieldIsEmpty(findTestObject('Modules/verification/Idcheck/enterRefrence'))
 			WebUI.click(findTestObject('Modules/hamburgerMenu'))
+			
+			
 		}
 	}
 
