@@ -14,6 +14,7 @@ def refrence = IDcheck.refrence
 
 
 CustomKeywords.'login.loginIntoApplicationWithGlobalVariable'()
+CustomKeywords.'login.verificationresetIDcheck'(country, mobNum, name, refrence, true)
 CustomKeywords.'login.verificationIDcheck'(country, mobNum, name, refrence, true)
 
 

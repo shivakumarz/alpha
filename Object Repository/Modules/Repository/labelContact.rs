@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//td[@class='tablecell-contact']</value>
+         <value>	//td[@class='tablecell-contact']</value>
       </entry>
       <entry>
          <key>BASIC</key>

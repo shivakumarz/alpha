@@ -1,38 +1,30 @@
 package incomplete
 
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
 import com.kms.katalon.core.annotation.Keyword
-import com.kms.katalon.core.checkpoint.Checkpoint
-import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
-import com.kms.katalon.core.model.FailureHandling
-import com.kms.katalon.core.testcase.TestCase
-import com.kms.katalon.core.testdata.TestData
 import com.kms.katalon.core.testobject.TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
-import internal.GlobalVariable
 
 public class incompleteValidation {
+
+	@Keyword
+	def static void serachIncompleteRec(String name){
+		WebUI.click(findTestObject('Modules/repositoryIcon'))
+		WebUI.click(findTestObject('Modules/Repository/TabIncomplete'))
+		WebUI.sendKeys(findTestObject('Modules/Repository/searchbox'), name)
+		WebUI.click(findTestObject('Modules/Repository/columnCheckbox'))
+	}
 	
 	@Keyword
-	def static void loginIntoApplication(String applicationURL,String username,String password){
-
-		WebUI.openBrowser(applicationURL)
-		WebUI.maximizeWindow()
-
-		WebUI.verifyElementPresent(findTestObject('Login/logo'), 0)
-		WebUI.sendKeys(findTestObject('Login/userName'), username)
-		WebUI.sendKeys(findTestObject('Login/userPassword'), password)
-		WebUI.click(findTestObject('Login/loginButton'))
-		WebUI.delay(1)
-		WebUI.verifyElementPresent(findTestObject('Login/moduleIdDescription'), 0)
+	def static void verifyTextMatches(TestObject element, String expTxt) {
+		String actTxt = WebUI.getText(element)
+		if (actTxt.equals(expTxt)) {
+			println("Verification: Text matches the expected value: " + expTxt)
+		} else {
+			println("Verification: Text does not match the expected value.")
+			throw new AssertionError("Text does not match the expected value: " + expTxt)
+		}
 	}
 }

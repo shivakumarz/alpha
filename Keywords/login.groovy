@@ -48,16 +48,31 @@ public class login {
 			WebUI.sendKeys(findTestObject('Modules/verification/Idcheck/enterMobileNumber'), MobNum)
 			WebUI.sendKeys(findTestObject('Modules/verification/Idcheck/enterName'), name)
 			WebUI.sendKeys(findTestObject('Modules/verification/Idcheck/enterRefrence'), refrence)
+			WebUI.click(findTestObject('Modules/verification/Idcheck/buttonSend'))
+			WebUI.verifyElementPresent(findTestObject('Modules/verification/Idcheck/succefulAlert'), 0)
+			WebUI.click(findTestObject('Modules/hamburgerMenu'))
+		}
+	}
+
+	@Keyword
+	def static void verificationresetIDcheck(String country,String MobNum,String name, String refrence, boolean sendSMS) {
+		WebUI.click(findTestObject('Modules/verificationIcon'))
+		if (sendSMS) {
+			WebUI.click(findTestObject('Modules/verification/Idcheck/countryCodeDropDown'))
+			WebUI.sendKeys(findTestObject('Modules/verification/Idcheck/countrySearch'), country)
+			WebUI.click(findTestObject('Modules/verification/Idcheck/selectCountry'))
+			WebUI.sendKeys(findTestObject('Modules/verification/Idcheck/enterMobileNumber'), MobNum)
+			WebUI.sendKeys(findTestObject('Modules/verification/Idcheck/enterName'), name)
+			WebUI.sendKeys(findTestObject('Modules/verification/Idcheck/enterRefrence'), refrence)
 			WebUI.click(findTestObject('Modules/verification/Idcheck/resetButton'))
 			// Pass the TestObject for the fields you want to verify
 			verifyFieldIsEmpty(findTestObject('Modules/verification/Idcheck/enterMobileNumber'))
 			verifyFieldIsEmpty(findTestObject('Modules/verification/Idcheck/enterName'))
 			verifyFieldIsEmpty(findTestObject('Modules/verification/Idcheck/enterRefrence'))
-			WebUI.click(findTestObject('Modules/verification/Idcheck/buttonSend'))
-			WebUI.verifyElementPresent(findTestObject('Modules/verification/Idcheck/succefulAlert'), 0)
+			WebUI.click(findTestObject('Modules/hamburgerMenu'))
+			
 		}
 	}
-
 
 	@Keyword
 	def static void sendNotification(String recipient, String subject, String message, boolean sendSMS) {
