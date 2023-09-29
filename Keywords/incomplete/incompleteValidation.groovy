@@ -16,7 +16,7 @@ public class incompleteValidation {
 		WebUI.sendKeys(findTestObject('Modules/Repository/searchbox'), name)
 		WebUI.click(findTestObject('Modules/Repository/columnCheckbox'))
 	}
-	
+
 	@Keyword
 	def static void verifyTextMatches(TestObject element, String expTxt) {
 		String actTxt = WebUI.getText(element)

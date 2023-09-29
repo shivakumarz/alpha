@@ -46,11 +46,13 @@
                 "errorOnParsing": false
               }
             }
-          ]
+          ],
+          "javadoc": ""
         },
         {
           "name": "loginIntoApplicationWithGlobalVariable",
-          "parameters": []
+          "parameters": [],
+          "javadoc": ""
         },
         {
           "name": "verifyFieldIsEmpty",
@@ -68,7 +70,8 @@
                 "errorOnParsing": false
               }
             }
-          ]
+          ],
+          "javadoc": ""
         },
         {
           "name": "verificationIDcheck",
@@ -138,7 +141,8 @@
                 "errorOnParsing": false
               }
             }
-          ]
+          ],
+          "javadoc": ""
         },
         {
           "name": "verificationresetIDcheck",
@@ -208,7 +212,8 @@
                 "errorOnParsing": false
               }
             }
-          ]
+          ],
+          "javadoc": ""
         },
         {
           "name": "sendNotification",
@@ -265,10 +270,11 @@
                 "errorOnParsing": false
               }
             }
-          ]
+          ],
+          "javadoc": ""
         }
       ]
     }
   ],
-  "javadocParsed": false
+  "javadocParsed": true
 }

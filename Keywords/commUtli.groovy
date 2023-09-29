@@ -35,13 +35,12 @@ public class commUtli {
 			KeywordUtil.markFailed("Failed to send text to the element: " + e.getMessage())
 		}
 	}
-	
-	
+
+
 	@Keyword
 	def static String getTextFromElement(String testObj) {
 		TestObject element = findTestObject(testObj)
 		String text = WebUI.getText(element)
 		return text
 	}
-	
 }

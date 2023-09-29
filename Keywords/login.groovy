@@ -70,7 +70,7 @@ public class login {
 			verifyFieldIsEmpty(findTestObject('Modules/verification/Idcheck/enterName'))
 			verifyFieldIsEmpty(findTestObject('Modules/verification/Idcheck/enterRefrence'))
 			WebUI.click(findTestObject('Modules/hamburgerMenu'))
-			
+
 		}
 	}
 
