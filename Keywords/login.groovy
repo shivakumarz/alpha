@@ -37,10 +37,10 @@ public class login {
 			KeywordUtil.markFailed("The field is not empty")
 		}
 	}
-	
+
 	@Keyword
 	def static void verificationIDcheck(String country,String MobNum,String name, String refrence, boolean sendSMS) {
-		WebUI.click(findTestObject('Modules/verification/Idcheck/verificationIcon'))
+		WebUI.click(findTestObject('Modules/verificationIcon'))
 		if (sendSMS) {
 			WebUI.click(findTestObject('Modules/verification/Idcheck/countryCodeDropDown'))
 			WebUI.sendKeys(findTestObject('Modules/verification/Idcheck/countrySearch'), country)
@@ -53,13 +53,11 @@ public class login {
 			verifyFieldIsEmpty(findTestObject('Modules/verification/Idcheck/enterMobileNumber'))
 			verifyFieldIsEmpty(findTestObject('Modules/verification/Idcheck/enterName'))
 			verifyFieldIsEmpty(findTestObject('Modules/verification/Idcheck/enterRefrence'))
-//			WebUI.verifyElementAttributeValue(findTestObject('Modules/verification/Idcheck/enterMobileNumber'), "value", MobNum)
-//			WebUI.verifyElementAttributeValue(findTestObject('Modules/verification/Idcheck/enterName'), "value", name)
-//			WebUI.verifyElementAttributeValue(findTestObject('Modules/verification/Idcheck/enterRefrence'), "value", refrence)
+			WebUI.click(findTestObject('Modules/verification/Idcheck/buttonSend'))
+			WebUI.verifyElementPresent(findTestObject('Modules/verification/Idcheck/succefulAlert'), 0)
 		}
-
 	}
-	
+
 
 	@Keyword
 	def static void sendNotification(String recipient, String subject, String message, boolean sendSMS) {
@@ -73,6 +71,5 @@ public class login {
 			sendEmailNotification(recipient, subject, message)
 		}
 	}
-
-	}
+}
 

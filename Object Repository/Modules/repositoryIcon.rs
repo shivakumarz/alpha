@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>verificationIcon</name>
+   <name>repositoryIcon</name>
    <tag></tag>
-   <elementGuidId>70cae3a2-2371-4111-9d37-180c1e0b7fb1</elementGuidId>
+   <elementGuidId>6330d826-a7b6-4458-9254-d7905094a628</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[contains(text(),'Repository')]</value>
+      </entry>
       <entry>
          <key>BASIC</key>
          <value></value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//div[contains(text(),'Verification')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
