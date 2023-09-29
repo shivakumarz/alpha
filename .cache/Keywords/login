@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "062CD1170B381FF9F00BD9BFD5912E13",
+  "keywordFileContentHash": "1DEED0B88A377FEE8DFA5F557C44D7E9",
   "keywordClasses": [
     {
       "name": "login",
@@ -46,13 +46,11 @@
                 "errorOnParsing": false
               }
             }
-          ],
-          "javadoc": ""
+          ]
         },
         {
           "name": "loginIntoApplicationWithGlobalVariable",
-          "parameters": [],
-          "javadoc": ""
+          "parameters": []
         },
         {
           "name": "verifyFieldIsEmpty",
@@ -70,8 +68,7 @@
                 "errorOnParsing": false
               }
             }
-          ],
-          "javadoc": ""
+          ]
         },
         {
           "name": "verificationIDcheck",
@@ -141,8 +138,7 @@
                 "errorOnParsing": false
               }
             }
-          ],
-          "javadoc": ""
+          ]
         },
         {
           "name": "verificationresetIDcheck",
@@ -212,8 +208,7 @@
                 "errorOnParsing": false
               }
             }
-          ],
-          "javadoc": ""
+          ]
         },
         {
           "name": "sendNotification",
@@ -270,11 +265,10 @@
                 "errorOnParsing": false
               }
             }
-          ],
-          "javadoc": ""
+          ]
         }
       ]
     }
   ],
-  "javadocParsed": true
+  "javadocParsed": false
 }
